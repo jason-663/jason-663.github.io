@@ -1,0 +1,54 @@
+/* 鼠标悬停向上显示出来的盒子默认显示模式 */
+.container .cover-social-link .btn-code{
+    display: block;
+}
+
+/* 鼠标悬停向上显示出来的盒子样式 */
+.container .cover-social-link .btn-code {
+    display: none;
+    position: relative;
+    top: -232px;
+    width: 165px;
+    height: 170px;
+    margin-left: 7px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #cdccd0;
+    background-color: rgb(255, 0, 0);
+}
+
+/* 鼠标悬停向上显示出来的盒子虚拟按钮的位置 */
+.container .cover-social-link .btn-code {
+    top: -242px;
+    margin-left: 15px;
+}
+
+/* 鼠标悬停向上显示出来的盒子中图片的位置 */
+.container .cover-social-link .btn-code .box-t {
+    margin-top: 3px;
+}
+
+/* 鼠标悬停向上显示出来的盒子中图片的大小 */
+.container .cover-social-link .btn-code .box-t img {
+    width: 165px;
+    height: 165px;
+}
+
+/* 鼠标悬停向上显示出来的盒子下的修饰盒子样式 */
+.container .cover-social-link .btn-code .box-b {
+    width: 10px;
+    height: 10px;
+    margin: -28px auto;
+    background-color: rgb(253, 0, 0);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 鼠标悬停向上显示出来的盒子与其修饰盒子的距离 */
+.container .cover-social-link .btn-code .box-b {
+    margin: -28px auto;
+}

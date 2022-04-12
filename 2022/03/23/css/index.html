@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="写在前面, 废物的摸鱼日常">
+    <meta name="keywords" content="CSS 梳理, 废物的摸鱼日常">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>写在前面 | 废物的摸鱼日常</title>
+    <title>CSS 梳理 | 废物的摸鱼日常</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,7 +227,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -240,12 +240,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/Christmas.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">写在前面</h1>
+                    <h1 class="description center-align post-title">CSS 梳理</h1>
                 </div>
             </div>
         </div>
@@ -255,10 +255,124 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        /* padding-bottom: 30px; */
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+
+    .style-scrollbar::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .style-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #0ae;
+        border-radius: 10px;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                color-stop(.5, rgba(255, 255, 255, .2)),
+                color-stop(.5, transparent), to(transparent));
+    }
+
+    .style-scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -267,8 +381,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                                <span class="chip bg-color">日记</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/css/">
+                                <span class="chip bg-color">css</span>
                             </a>
                         
                     </div>
@@ -279,8 +401,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                日常
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -292,28 +414,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-25
+                    2022-03-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-16
+                    2022-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    699
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 
@@ -333,8 +455,89 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  折腾了好几天，终于是把自己想要的东西搭起来了，今天下午一直在修补博客，以后我的一些学习随笔就有地方放了，日记我也会在这里发一遍，也会跟公众号同步，所以大家尽情放心。<br>  大家可能也看到了，网址是fishpond.vip，可能有人会很疑惑，为什么要用这个网址，而且公众号菜单也写的是“我的鱼塘”。翻译一下，<code>fish pond</code>中文译为养鱼池，我呢，会把我学到的东西，想要表达的东西，扔到这里，再加上我给我自己的定位，就相当于把<code>天天不干正事研究些乱七八糟八辈子用不到的东西</code>当作鱼，俗称<code>知识的尘埃</code>，这些鱼需要一个地方去放他，养他，毕竟是我亲手摸出来的，我得负责养，但是不能用盆，以后肯定越摸越多，得找个大一点的地方，那就是养鱼池了，所以我第一时间想到用fishpond.com作为我的域名，但是问题来了，这个域名被一个国外的类似二手交易平台给注册了，他们自称是交易物品是鱼，然后大家在里面互相挑选然后进行交易……嗯，就是现在鱼塘的运营方式，钓鱼花钱，想拿走钓上来的鱼还得掏钱……至于为什么用vip做一级域名，因为三个字母的就他的使用频率较高，比较好记，有人可能会想不是因为vip好听吗？好听的多了，但是敲键盘累手啊……<br>  正好今天是圣诞节，估计大家过的都挺好的，我反正是挺困的，睡了一下午，中间醒了好几次，但是就是困，没办法，今天哪都没去，我来北京一年半，哪都没去，我可佩服我自己了……不对，其实也算是去了一个地方，去了趟上海，看了场比赛，但是感觉巨亏，因为自己喜欢的队伍没赢，场馆离海边挺近的，也没去成。唉，我是挺佩服还有精力关注游戏甚至关注战队的人的，我认识一个28的人，还关注刀塔2的战队还有前段时间的比赛，我现在快对游戏提不起兴趣了，不然我也不会睡一下午……<br>  好了，就是简单介绍一下我博客的情况，顺便测试一下我暂时调整的功能是不是还正常，如果不出意外的话接下来我要大规模的在我的博客上发东西了，同时也但愿我的小站能坚挺下去，我觉得没问题！</p>
-<img src="../../../../medias/reward/greenmp.png" width="500px">
+                <h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1><p>css格式<br>选择器{属性:值;}</p>
+<h2 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h2><p>标签选择器，类选择器，id选择器，通配符选择器</p>
+<h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><p>使用html标签名命名的为标签选择器<br>eq：<code>div{color:green;}</code></p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>可以设置差异化<br>.类名{内容}<br>不允许使用纯数字、中文字符命名</p>
+<h4 id="多类引用"><a href="#多类引用" class="headerlink" title="多类引用"></a>多类引用</h4><p>一个元素引用多个类名，在每个类名之间加入空格即可。</p>
+<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><p>使用html标签名命名的为标签选择器，使用#开头<br>#名称{内容}<br>不允许使用纯数字、中文字符命名<br>只能调用一次，如果上面有标签元素调用了id选择器，下面的标签就不可以使用这个选择器，类选择器不会有这个限制</p>
+<h3 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h3><p>会将html中所有标签属性都改为这里的样式，无需刻意调用<br>*{内容}</p>
+<h2 id="字符属性"><a href="#字符属性" class="headerlink" title="字符属性"></a>字符属性</h2><h3 id="字体属性font-family"><a href="#字体属性font-family" class="headerlink" title="字体属性font-family"></a>字体属性font-family</h3><p>font-family:’微软雅黑,Microsoft YaHei’;<br>建议使用字体的英文名称；设置多个字体的意思是,如果用户电脑未安装第一种字体，就执行第二个字体，以此类推；字体与字体之间用英文逗号分隔；如果字体名称有两个或两个以上的单词组成，使用引号包含起来，单双引都可</p>
+<h3 id="字体大小font-size"><a href="#字体大小font-size" class="headerlink" title="字体大小font-size"></a>字体大小font-size</h3><p>font-size: 20px;<br>px为像素，标题标签需要单独指定大小，body中设置会不起效果</p>
+<h3 id="字体粗细font-weight"><a href="#字体粗细font-weight" class="headerlink" title="字体粗细font-weight"></a>字体粗细font-weight</h3><p>font-weight: normal[bold;bolder;leghter;number]<br>normal:正常字体，相当于number为400.声明此值会取消此前所有设置<br>bold:粗体，相当于number为700，也相当于b对象作用<br>bolder:ie5+，特粗体。<br>leghter:ie5+，细体。<br>number:ie5+    100~900[取整递增]<br>通常使用数字对文字的粗细进行修改</p>
+<h3 id="字体样式font-style"><a href="#字体样式font-style" class="headerlink" title="字体样式font-style"></a>字体样式font-style</h3><p>normal：默认值，浏览器显示的标准字体样式<br>italic：斜体</p>
+<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><h3 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h3><p>使用预定义颜色值（单词）、16进制或RGB进行文本颜色描述<br>color: red;<br>或<br>color:#ff0000;<br>或<br>color: rgb(255,0,0);</p>
+<h3 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h3><p>text-align：用于水平方向的文本对齐方式<br>left左对齐<br>right右对齐<br>center居中对齐</p>
+<h3 id="文本装饰"><a href="#文本装饰" class="headerlink" title="文本装饰"></a>文本装饰</h3><p>text-decoration：装饰文本的线的存在位置<br>none：取消所有文本装饰<br>underline：下划线<br>line-through：删除线<br>overline：上划线</p>
+<h3 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h3><p>text-indent: 10px;：段落第一行进行缩进<br>px是像素<br>em也是像素，此单位为相对当前对象和元素进行缩进，1em为当前元素的一个文字的距离，如果当前元素没有设置大小，会按照父元素大小的一个文字大小</p>
+<h3 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h3><p>line-height：控制行与行之间的距离<br>px像素</p>
+<h2 id="css引用"><a href="#css引用" class="headerlink" title="css引用"></a>css引用</h2><h3 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h3><p>写在标签里面的（&lt;p style=”color: red”&gt;）为行内样式表<br>使用较少，适用于修改简单需求的情况<br>所有的属性都需要在双引号内</p>
+<h3 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h3><p>写在&lt;style&gt;标签里的为内部样式表<br>理论上可以放到HTML的任何地方，一般放在head标签中<br>控制范围是整个html</p>
+<h3 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h3><p>使用较多，适用于<br>写在.css文件中，在html里使用&lt;link&gt;标签引入该.css文件，这种方式为外部引入。注意路径问题</p>
+<h3 id="chrome调试工具"><a href="#chrome调试工具" class="headerlink" title="chrome调试工具"></a>chrome调试工具</h3><p>f12，剩下的自己查吧</p>
+<h3 id="Emmet语法"><a href="#Emmet语法" class="headerlink" title="Emmet语法"></a>Emmet语法</h3><h6 id="使用Emmet语法快速生成html框架结构"><a href="#使用Emmet语法快速生成html框架结构" class="headerlink" title="使用Emmet语法快速生成html框架结构"></a>使用Emmet语法快速生成html框架结构</h6><p>标签名加上星号可快速生成多个该标签，div*10.<br>有父子级关系的标签，可以用父标签名&gt;子标签名书写创建，ul&gt;li<br>有兄弟标签，用两个标签名中间加加号，div+p<br>想生成带有类名或id名的字符，写.类名或#id名，默认div，p.gray；<br>如果生成div类名是有序的，使用自增$符，.demo$*5<br>如果想要在生成的标签内部写内容用{}}，div{lalalalalala}</p>
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>又称为包含选择器，适用于有父子级关系的元素；最终更改的是最后一个元素<br>ol li {}<br>如果有同类的父子级，可以通过修改其中一个父级的class进行区分<br>ol li {}<br>.nav li {}</p>
+<h3 id="子代选择器"><a href="#子代选择器" class="headerlink" title="子代选择器"></a>子代选择器</h3><p>适用于父子级关系中最近一级的子元素</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token selector">div a </span><span class="token punctuation">{</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 可以分别尝试一下 */</span>
+        <span class="token selector">div>a </span><span class="token punctuation">{</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>div下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>div下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>div p下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>div p下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>并集选择器可以选择多组标签，同时为他们定义相同的样式，适用于集体声明。<br>并集选择器通过逗号链接，任何形式的选择器都可以作为并集选择器的一部分，包括元素名，父代子代，基本选择器等<br>一般情况下习惯每一个选择器名还有逗号独占一行，最后一个选择器没有逗号</p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>适用于向某些选择器添加特殊效果<br>使用冒号开头,:demo，:herm-ol</p>
+<h4 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h4><p>a:link  所有未被访问的链接<br>a:visited  所有已访问过的链接（涉及隐私，font-size没效果）<br>a:hover   鼠标指针在连接上<br>a:active  鼠标按下未弹起的连接<br>Tip:尽量按link，visited，hover，active的顺序对连接进行修改<br>链接想改变样式需要单独设置</p>
+<h4 id="focus伪类选择器"><a href="#focus伪类选择器" class="headerlink" title=":focus伪类选择器"></a>:focus伪类选择器</h4><p>适用于获取有焦点（光标）的元素，例如input文本框</p>
+<h2 id="元素显示模式"><a href="#元素显示模式" class="headerlink" title="元素显示模式"></a>元素显示模式</h2><p>作用：为了更好的布局网页</p>
+<h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3><p>特点：独占一行；高宽内外边距可自定义；宽度默认占浏览器（父级宽度）的100%；可以放行内或块级元素<br>注意：文字类元素内不能适合用块级元素，p标签不能放div标签</p>
+<h3 id="行内元素（内联元素）"><a href="#行内元素（内联元素）" class="headerlink" title="行内元素（内联元素）"></a>行内元素（内联元素）</h3><p>特点：相邻的行内元素可以在一行上；宽高直接设置不会生效；默认的宽度是内容的宽度；行内元素只能容纳文本或其他行内元素。<br>a可以放块级元素，多会转换为块级元素</p>
+<h3 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h3><p>部分标签同时具备块级元素和行内元素的特性，如img，input等</p>
+<h3 id="显示模式的转换"><a href="#显示模式的转换" class="headerlink" title="显示模式的转换"></a>显示模式的转换</h3><p>有些情况下，某些元素需要模式的转换，通过display属性进行转换<br>eq：a标签需要增加触发范围</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">a</span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* block为转换成块元素；inline为转换成行内元素；inline-block为行内块元素 */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>工具snipaste，win10应用商店可查<br>单行文字垂直居中：使用line-hight可以让文字的行高等于盒子hight的高度，因为本身文字的行高就等于文字本身的高度加文字上距离元素上边框的距离加文字下距离元素下的高度</p>
+<h2 id="背景样式"><a href="#背景样式" class="headerlink" title="背景样式"></a>背景样式</h2><h3 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h3><p>background-color：rgb[预设;16进制]<br>默认值为transparent，透明的</p>
+<h3 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h3><p>用于装饰性图片<br>background-image：none [url(url图片路径)]<br>相对于插入图片，便于控制位置，</p>
+<h3 id="背景平铺"><a href="#背景平铺" class="headerlink" title="背景平铺"></a>背景平铺</h3><p>background-repeat: repeat [no-repeat;repeat-x;repeat-y]<br>repeat平铺，no-repeat不平铺，repeat-x沿x轴平铺，repeat-y沿y轴平铺<br>默认为平铺</p>
+<h3 id="背景位置"><a href="#背景位置" class="headerlink" title="背景位置"></a>背景位置</h3><h4 id="方位名词"><a href="#方位名词" class="headerlink" title="方位名词"></a>方位名词</h4><p>background-position: x y;<br>值：<br>lenght     百分比;由浮点数和单位标识符组成的长度值<br>position   top;center;botton;left;right<br>如果xy两个值全部使用方位名词，没有先后顺序；但是当只有一个方位名词时，第二个为默认为居中对齐</p>
+<h4 id="精确位置"><a href="#精确位置" class="headerlink" title="精确位置"></a>精确位置</h4><p>background-position: 20px 50px;<br>如果使用精确位置，规定第一个值必须是x轴，第二个值必须是y轴；如果只有一个精确值，前面属性不变，缺省的第二个值默认为y轴居中对齐</p>
+<h4 id="混合单位"><a href="#混合单位" class="headerlink" title="混合单位"></a>混合单位</h4><p>background-position: center 50px;<br>混合使用时，第一个值一定是x轴，第二轴一定是y轴</p>
+<h3 id="背景固定"><a href="#背景固定" class="headerlink" title="背景固定"></a>背景固定</h3><p>固定图片在某个位置<br>background-attachment: scroll fixed<br>scroll为滚动，fixed为固定</p>
+<h3 id="背景的属性复合性写法"><a href="#背景的属性复合性写法" class="headerlink" title="背景的属性复合性写法"></a>背景的属性复合性写法</h3><p>background: 值<br>值的顺序没有严格要求，一般书写习惯为：background:背景颜色 背景图片地址 平铺样式 背景图片滚动 背景图片位置;</p>
+<h3 id="背景色半透明"><a href="#背景色半透明" class="headerlink" title="背景色半透明"></a>背景色半透明</h3><p>background: rgba(0,0,0,0.3)<br>第一个值为红色值，第二个值为绿色值，第三个为蓝色值，最后一个为alpha值，取值在0~1之间</p>
+<h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><p>相同的选择器给相同的样式<br>样式冲突: 遵循就近原则，就是浏览器从上倒下解析时，最后一个同属性的会覆盖掉上面之前设置的相同属性。<br>不冲突：不层叠</p>
+<h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><p>当给父级设置样式后，下面的子级同样会继承某些父级样式（文字类属性），子级单独设置样式，父级的样式会失效</p>
+<!-- ### 行高的继承p131
+
+## 盒子模型
+盒子模型组成：边框，内容，内边框，外边框
+### 边框
+border-width -style -color -->
+
+<p>（未完待续……）<br><strong>更多内容：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://localhost:4000/2022/03/23/html/">HTML 教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://localhost:4000/2022/03/23/javascript/">JavaScript 梳理</a><!-- 
+### 内边框</li>
+</ul>
+<h3 id="外边框"><a href="#外边框" class="headerlink" title="外边框"></a>外边框</h3><p> –&gt;</p>
+--></li></ul>
                 
             </div>
             <hr/>
@@ -360,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/25/preface/">http://example.com/2021/12/25/preface/</a>
+                    <a href="http://example.com/2022/03/23/css/">http://example.com/2022/03/23/css/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -398,8 +601,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                                    <span class="chip bg-color">日记</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/css/">
+                                    <span class="chip bg-color">css</span>
                                 </a>
                             
                         </div>
@@ -447,30 +658,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/05/0105/">
+                <a href="/2022/03/23/javascript/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/Jones.jpg" class="responsive-img" alt="闲聊 | 年结">
                         
-                        <span class="card-title">闲聊 | 年结</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="JavaScript 梳理">
+                        
+                        <span class="card-title">JavaScript 梳理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为了不让我自己产生反感，我决定远离网上的范文那种年终总结格式
+                            要点梳理
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    日常
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -480,8 +692,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                        <span class="chip bg-color">日记</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
@@ -495,30 +715,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/02/update/">
+                <a href="/2022/03/23/html/">
                     <div class="card-image">
                         
-                        <img src="/medias/reward/update.jpeg" class="responsive-img" alt="网站更新日志">
                         
-                        <span class="card-title">网站更新日志</span>
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="HTML 教程">
+                        
+                        <span class="card-title">HTML 教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            持续更新中……
+                            要点梳理
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97/" class="post-category">
-                                    日志
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -528,8 +749,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A5%E5%BF%97/">
-                        <span class="chip bg-color">日志</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
                 </div>
@@ -562,6 +791,101 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <!-- card style="background-color: white;" -->
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content" class="style-scrollbar"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    <div id="floating-toc-btn" class="hide-on-med-and-down">
+        <a class="btn-floating btn-large bg-color">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+    
+
+        <script src="/libs/tocbot/tocbot.min.js"></script>
+        <script>
+            $(function () {
+                tocbot.init({
+                    tocSelector: '#toc-content',
+                    contentSelector: '#articleContent',
+                    headingsOffset: -($(window).height() * 0.4 - 45),
+                    collapseDepth: Number('2'),
+                    headingSelector: 'h6, h5, h4, h3, h2'
+                });
+
+                // modify the toc link href to support Chinese.
+                let i = 0;
+                let tocHeading = 'toc-heading-';
+                $('#toc-content a').each(function () {
+                    $(this).attr('href', '#' + tocHeading + (++i));
+                });
+
+                // modify the heading title id to support Chinese.
+                i = 0;
+                $('#articleContent').children('h6, h5, h4, h3, h2').each(function () {
+                    $(this).attr('id', tocHeading + (++i));
+                });
+
+                // Set scroll toc fixed.
+                let tocHeight = parseInt($(window).height() * 0.4 - 64);
+                let $tocWidget = $('.toc-widget');
+                $(window).scroll(function () {
+                    let scroll = $(window).scrollTop();
+                    /* add post toc fixed. */
+                    if (scroll > tocHeight) {
+                        $tocWidget.addClass('toc-fixed');
+                    } else {
+                        $tocWidget.removeClass('toc-fixed');
+                    }
+                });
+
+        
+                    /* 修复文章卡片 div 的宽度. */
+                    let fixPostCardWidth = function (srcId, targetId) {
+                        let srcDiv = $('#' + srcId);
+                        if (srcDiv.length === 0) {
+                            return;
+                        }
+
+                        let w = srcDiv.width();
+                        if (w >= 450) {
+                            w = w + 21;
+                        } else if (w >= 350 && w < 450) {
+                            w = w + 18;
+                        } else if (w >= 300 && w < 350) {
+                            w = w + 16;
+                        } else {
+                            w = w + 14;
+                        }
+                        $('#' + targetId).width(w);
+                    };
+
+                    // 切换TOC目录展开收缩的相关操作.
+                    const expandedClass = 'expanded';
+                    let $tocAside = $('#toc-aside');
+                    let $mainContent = $('#main-content');
+                    $('#floating-toc-btn .btn-floating').click(function () {
+                        if ($tocAside.hasClass(expandedClass)) {
+                            $tocAside.removeClass(expandedClass).hide();
+                            $mainContent.removeClass('l9');
+                        } else {
+                            $tocAside.addClass(expandedClass).show();
+                            $mainContent.addClass('l9');
+                        }
+                        fixPostCardWidth('artDetail', 'prenext-posts');
+                    });
+        
+    });
+        </script>
     
 
 </main>
