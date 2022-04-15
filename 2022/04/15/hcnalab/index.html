@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="写在前面, 废物的摸鱼日常">
+    <meta name="keywords" content="《HCNA网络技术实验指南》实验, 废物的摸鱼日常">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>写在前面 | 废物的摸鱼日常</title>
+    <title>《HCNA网络技术实验指南》实验 | 废物的摸鱼日常</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/Christmas.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">写在前面</h1>
+                    <h1 class="description center-align post-title">《HCNA网络技术实验指南》实验</h1>
                 </div>
             </div>
         </div>
@@ -260,10 +260,124 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        /* padding-bottom: 30px; */
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+
+    .style-scrollbar::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .style-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #0ae;
+        border-radius: 10px;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                color-stop(.5, rgba(255, 255, 255, .2)),
+                color-stop(.5, transparent), to(transparent));
+    }
+
+    .style-scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -272,8 +386,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                                <span class="chip bg-color">日记</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">网络</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                                <span class="chip bg-color">运维</span>
                             </a>
                         
                     </div>
@@ -284,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                日常
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -297,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-25
+                    2022-04-15
                 </div>
                 
 
@@ -306,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    699
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -333,8 +455,190 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  折腾了好几天，终于是把自己想要的东西搭起来了，今天下午一直在修补博客，以后我的一些学习随笔就有地方放了，日记我也会在这里发一遍，也会跟公众号同步，所以大家尽情放心。<br>  大家可能也看到了，网址是fishpond.vip，可能有人会很疑惑，为什么要用这个网址，而且公众号菜单也写的是“我的鱼塘”。翻译一下，<code>fish pond</code>中文译为养鱼池，我呢，会把我学到的东西，想要表达的东西，扔到这里，再加上我给我自己的定位，就相当于把<code>天天不干正事研究些乱七八糟八辈子用不到的东西</code>当作鱼，俗称<code>知识的尘埃</code>，这些鱼需要一个地方去放他，养他，毕竟是我亲手摸出来的，我得负责养，但是不能用盆，以后肯定越摸越多，得找个大一点的地方，那就是养鱼池了，所以我第一时间想到用fishpond.com作为我的域名，但是问题来了，这个域名被一个国外的类似二手交易平台给注册了，他们自称是交易物品是鱼，然后大家在里面互相挑选然后进行交易……嗯，就是现在鱼塘的运营方式，钓鱼花钱，想拿走钓上来的鱼还得掏钱……至于为什么用vip做一级域名，因为三个字母的就他的使用频率较高，比较好记，有人可能会想不是因为vip好听吗？好听的多了，但是敲键盘累手啊……<br>  正好今天是圣诞节，估计大家过的都挺好的，我反正是挺困的，睡了一下午，中间醒了好几次，但是就是困，没办法，今天哪都没去，我来北京一年半，哪都没去，我可佩服我自己了……不对，其实也算是去了一个地方，去了趟上海，看了场比赛，但是感觉巨亏，因为自己喜欢的队伍没赢，场馆离海边挺近的，也没去成。唉，我是挺佩服还有精力关注游戏甚至关注战队的人的，我认识一个28的人，还关注刀塔2的战队还有前段时间的比赛，我现在快对游戏提不起兴趣了，不然我也不会睡一下午……<br>  好了，就是简单介绍一下我博客的情况，顺便测试一下我暂时调整的功能是不是还正常，如果不出意外的话接下来我要大规模的在我的博客上发东西了，同时也但愿我的小站能坚挺下去，我觉得没问题！</p>
-<img src="../../../../medias/reward/greenmp.png" width="500px">
+                <h2 id="第一章-ensp与vrp的基础操作"><a href="#第一章-ensp与vrp的基础操作" class="headerlink" title="第一章 ensp与vrp的基础操作"></a>第一章 ensp与vrp的基础操作</h2><h3 id="内容描述"><a href="#内容描述" class="headerlink" title="内容描述"></a>内容描述</h3><h3 id="实例详情"><a href="#实例详情" class="headerlink" title="实例详情"></a>实例详情</h3><p>实验说明：配置telnet登录，使得可以通过ar1上的telnet进行远程访问<br>拓扑图：<img src="../../../../medias/network/1/1.1.png" alt="拓扑图"><br>编址：</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>接口</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>默认网关</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ar1</td>
+<td>g0/0/0</td>
+<td>10.1.1.254</td>
+<td>24</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ar2</td>
+<td>g0/0/0</td>
+<td>10.1.1.1</td>
+<td>24</td>
+<td>10.1.1.254</td>
+</tr>
+<tr>
+<td>ar3</td>
+<td>g0/0/0</td>
+<td>10.1.1.20</td>
+<td>24</td>
+<td>10.1.1.254</td>
+</tr>
+</tbody></table>
+<p>配置过程：<br>1.先将计划的IP地址分配到相应的设备和对应端口上，完成之后测试联通性</p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Huawei</span><span class="token punctuation">></span></span>
+Apr 13 2022 09:54:12-08:00 Huawei %%01IFPDT/4/IF<span class="token italic"><span class="token punctuation">_</span>STATE(l)[0]:Interface GigabitEt
+hernet0/0/0 has turned into UP state.
+&lt;Huawei>sys
+Enter system view, return user view with Ctrl+Z.
+[Huawei]int g0/0/0
+[Huawei-GigabitEthernet0/0/0]ip add 10.1.1.254 24
+Apr 13 2022 09:55:10-08:00 Huawei %%01IFNET/4/LINK<span class="token punctuation">_</span></span>STATE(l)[1]:The line protocol
+ IP on the interface GigabitEthernet0/0/0 has entered the UP state. 
+[Huawei-GigabitEthernet0/0/0]
+</code></pre>
+<p>ar2与ar3配置命令相似<br>2.配置telnet登录验证</p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Huawei</span><span class="token punctuation">></span></span>sys
+Enter system view, return user view with Ctrl+Z.
+[Huawei]user-inter    
+[Huawei]user-interface vty 0 4
+[Huawei-ui-vty0-4]aut    
+[Huawei-ui-vty0-4]authentication-mode pass    
+[Huawei-ui-vty0-4]authentication-mode password
+Please configure the login password (maximum length 16):huawei
+[Huawei-ui-vty0-4]q
+[Huawei]
+</code></pre>
+<p>这时通过其他两个任何一个路由器输入<code>telnet 10.1.1.254</code>，并输入密码，即可进入ar1的做界面<br>如果分不清到底是不是ar1的路由器，可以先将ar1路由器内的名称改为ar1，先进入配置视图（[Huawei]）然后输入<code>sysname 名称</code>。</p>
+<h2 id="第二章-交换机基础配置"><a href="#第二章-交换机基础配置" class="headerlink" title="第二章 交换机基础配置"></a>第二章 交换机基础配置</h2><h3 id="内容描述-1"><a href="#内容描述-1" class="headerlink" title="内容描述"></a>内容描述</h3><h3 id="实例详情-1"><a href="#实例详情-1" class="headerlink" title="实例详情"></a>实例详情</h3><p>实验说明：三台交换机，1和2是接入，3是汇聚，交换机之间使用全双工，并配置接口速率<br>拓扑图：<img src="../../../../medias/network/2/img/2.1.png"><br>编址：</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>接口</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>默认网关</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pc1</td>
+<td>e0/0/1</td>
+<td>10.1.1.1</td>
+<td>24</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pc2</td>
+<td>e0/0/1</td>
+<td>10.1.1.2</td>
+<td>24</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>配置过程：<br>先为PC配置好IP地址和子网掩码，并在其中一台pc机ping另一台pc机的IP地址，检查连通性<br>接下来配置交换机<br>1.配置交换机双工模式<br>配置前，由于交换机的自协商协议默认为开启状态，需先将该协议关闭，在进行配置</p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Huawei</span><span class="token punctuation">></span></span>sys
+Enter system view, return user view with Ctrl+Z.
+[Huawei]int g0/0/1
+[Huawei-GigabitEthernet0/0/1]undo ne
+[Huawei-GigabitEthernet0/0/1]undo negotiation au
+[Huawei-GigabitEthernet0/0/1]undo negotiation auto 
+[Huawei-GigabitEthernet0/0/1]dupl
+[Huawei-GigabitEthernet0/0/1]duplex 
+Apr 13 2022 11:11:22-08:00 Huawei DS/4/DATASYNC<span class="token italic"><span class="token punctuation">_</span>CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 4, the change loop count is 0, and the maximum number of records is 4095.fu
+[Huawei-GigabitEthernet0/0/1]duplex full 
+[Huawei-GigabitEthernet0/0/1]
+Apr 13 2022 11:11:32-08:00 Huawei DS/4/DATASYNC<span class="token punctuation">_</span></span>CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 5, the change loop count is 0, and the maximum number of records is 4095.
+[Huawei-GigabitEthernet0/0/1]
+</code></pre>
+<p>上下的三个端口分别配置此命令，至此，交换机间的工作模式全部切换为了全双工。<br>2.配置接口速率<br>由于用户（PC）较少，所以将GE口配置为100mbit/s，e口配置为10Mbit/s；配置前，由于交换机的自协商协议默认为开启状态，需先将该协议关闭，在进行配置</p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Huawei</span><span class="token punctuation">></span></span>sys
+Enter system view, return user view with Ctrl+Z.
+[Huawei]sys s1
+[s1]int 
+Apr 13 2022 11:22:42-08:00 s1 DS/4/DATASYNC<span class="token italic"><span class="token punctuation">_</span>CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 6, the change loop count is 0, and the maximum number of records is 4095.e0/0/1
+[s1-Ethernet0/0/1]un
+[s1-Ethernet0/0/1]undo ne
+[s1-Ethernet0/0/1]undo negotiation au
+[s1-Ethernet0/0/1]undo negotiation auto 
+[s1-Ethernet0/0/1]sp
+[s1-Ethernet0/0/1]speed 
+Apr 13 2022 11:23:02-08:00 s1 DS/4/DATASYNC<span class="token punctuation">_</span></span>CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 7, the change loop count is 0, and the maximum number of records is 4095.10
+[s1-Ethernet0/0/1]
+Apr 13 2022 11:23:12-08:00 s1 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 8, the change loop count is 0, and the maximum number of records is 4095.
+[s1-Ethernet0/0/1]int g0/0/1
+[s1-GigabitEthernet0/0/1]  
+</code></pre>
+<p>注意每一个端口都要单独关掉</p>
+<h4 id="二、arp与proxy-arp"><a href="#二、arp与proxy-arp" class="headerlink" title="二、arp与proxy arp"></a>二、arp与proxy arp</h4><p>实验说明：r1，s1，s2，配置静态arp且在路由器上配置arp代理<br>拓扑图：<br>编址：</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>接口</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>默认网关</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r1</td>
+<td>g0/0/1</td>
+<td>10.1.1.254</td>
+<td>24</td>
+<td>-</td>
+</tr>
+<tr>
+<td>r1</td>
+<td>g0/0/2</td>
+<td>10.2.254</td>
+<td>24</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pc1</td>
+<td>e0/0/1</td>
+<td>10.1.1.1</td>
+<td>16</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pc2</td>
+<td>e0/0/1</td>
+<td>10.1.1.2</td>
+<td>16</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pc3</td>
+<td>e0/0/1</td>
+<td>10.1.2.3</td>
+<td>16</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>配置过程：<br>按照编址表将IP地址配置到各个位置，<br>配置静态arp</p>
+<pre class=" language-markdown"><code class="language-markdown">[r1]arp static 10.1.1.1 5489-983D-766A   
+[r1]arp static 10.1.1.2 5489-9857-45FC   
+[r1]arp static 10.1.2.3 5489-9812-085E   
+[r1]
+</code></pre>
+<p>配置proxy arp<br>华为交换机默认代理arp是关闭状态，上面的两个网段是不能相互访问的，需要将对应网段接口的代理arp打开</p>
+<pre class=" language-markdown"><code class="language-markdown">[r1]int g0/0/1
+[r1-GigabitEthernet0/0/1]arp-pr
+[r1-GigabitEthernet0/0/1]arp-proxy en
+[r1-GigabitEthernet0/0/1]arp-proxy enable 
+[r1-GigabitEthernet0/0/1]int g0/0/2
+[r1-GigabitEthernet0/0/2]arp-pr
+[r1-GigabitEthernet0/0/2]arp-proxy 
+[r1-GigabitEthernet0/0/2]arp-proxy en
+[r1-GigabitEthernet0/0/2]
+</code></pre>
+<p>这样10.1.1.0网段就能和10.1.2.0网段通信了</p>
+
                 
             </div>
             <hr/>
@@ -360,7 +664,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/25/preface/">http://example.com/2021/12/25/preface/</a>
+                    <a href="http://example.com/2022/04/15/hcnalab/">http://example.com/2022/04/15/hcnalab/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -398,8 +702,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                                    <span class="chip bg-color">日记</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">网络</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                                    <span class="chip bg-color">运维</span>
                                 </a>
                             
                         </div>
@@ -443,45 +755,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/05/0105/">
+                <a href="/2022/04/15/hcnalab/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/Jones.jpg" class="responsive-img" alt="闲聊 | 年结">
                         
-                        <span class="card-title">闲聊 | 年结</span>
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="《HCNA网络技术实验指南》实验">
+                        
+                        <span class="card-title">《HCNA网络技术实验指南》实验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为了不让我自己产生反感，我决定远离网上的范文那种年终总结格式
+                            要点梳理
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    日常
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                        <span class="chip bg-color">日记</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                        <span class="chip bg-color">运维</span>
                     </a>
                     
                 </div>
@@ -495,30 +818,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/02/update/">
+                <a href="/2022/03/23/hcna/">
                     <div class="card-image">
                         
-                        <img src="/medias/reward/update.jpeg" class="responsive-img" alt="网站更新日志">
                         
-                        <span class="card-title">网站更新日志</span>
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="《HCNA网络技术实验指南》梳理">
+                        
+                        <span class="card-title">《HCNA网络技术实验指南》梳理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            持续更新中……
+                            要点梳理
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97/" class="post-category">
-                                    日志
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -528,8 +852,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A5%E5%BF%97/">
-                        <span class="chip bg-color">日志</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                        <span class="chip bg-color">运维</span>
                     </a>
                     
                 </div>
@@ -562,6 +894,101 @@
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <!-- card style="background-color: white;" -->
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content" class="style-scrollbar"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    <div id="floating-toc-btn" class="hide-on-med-and-down">
+        <a class="btn-floating btn-large bg-color">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+    
+
+        <script src="/libs/tocbot/tocbot.min.js"></script>
+        <script>
+            $(function () {
+                tocbot.init({
+                    tocSelector: '#toc-content',
+                    contentSelector: '#articleContent',
+                    headingsOffset: -($(window).height() * 0.4 - 45),
+                    collapseDepth: Number('2'),
+                    headingSelector: 'h6, h5, h4, h3, h2'
+                });
+
+                // modify the toc link href to support Chinese.
+                let i = 0;
+                let tocHeading = 'toc-heading-';
+                $('#toc-content a').each(function () {
+                    $(this).attr('href', '#' + tocHeading + (++i));
+                });
+
+                // modify the heading title id to support Chinese.
+                i = 0;
+                $('#articleContent').children('h6, h5, h4, h3, h2').each(function () {
+                    $(this).attr('id', tocHeading + (++i));
+                });
+
+                // Set scroll toc fixed.
+                let tocHeight = parseInt($(window).height() * 0.4 - 64);
+                let $tocWidget = $('.toc-widget');
+                $(window).scroll(function () {
+                    let scroll = $(window).scrollTop();
+                    /* add post toc fixed. */
+                    if (scroll > tocHeight) {
+                        $tocWidget.addClass('toc-fixed');
+                    } else {
+                        $tocWidget.removeClass('toc-fixed');
+                    }
+                });
+
+        
+                    /* 修复文章卡片 div 的宽度. */
+                    let fixPostCardWidth = function (srcId, targetId) {
+                        let srcDiv = $('#' + srcId);
+                        if (srcDiv.length === 0) {
+                            return;
+                        }
+
+                        let w = srcDiv.width();
+                        if (w >= 450) {
+                            w = w + 21;
+                        } else if (w >= 350 && w < 450) {
+                            w = w + 18;
+                        } else if (w >= 300 && w < 350) {
+                            w = w + 16;
+                        } else {
+                            w = w + 14;
+                        }
+                        $('#' + targetId).width(w);
+                    };
+
+                    // 切换TOC目录展开收缩的相关操作.
+                    const expandedClass = 'expanded';
+                    let $tocAside = $('#toc-aside');
+                    let $mainContent = $('#main-content');
+                    $('#floating-toc-btn .btn-floating').click(function () {
+                        if ($tocAside.hasClass(expandedClass)) {
+                            $tocAside.removeClass(expandedClass).hide();
+                            $mainContent.removeClass('l9');
+                        } else {
+                            $tocAside.addClass(expandedClass).show();
+                            $mainContent.addClass('l9');
+                        }
+                        fixPostCardWidth('artDetail', 'prenext-posts');
+                    });
+        
+    });
+        </script>
     
 
 </main>
