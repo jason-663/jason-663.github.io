@@ -2294,3 +2294,14 @@ body.dark .aplayer{background: #2f3742!important;}
 body.dark img, body.dark strong {
     filter: brightness(.7);
 }
+
+/**普通指针样式**/  
+body{
+	cursor:url(../medias/mouse/nor.ani),default;
+    /* auto!important;  */
+	}  
+/**链接指针样式**/  
+a:hover{
+	cursor:url(../medias/mouse/link.ani),pointer;
+    /* auto!important; */
+	}
